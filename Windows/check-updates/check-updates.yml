@@ -1,5 +1,5 @@
 ---
-- hosts: Windows
+- hosts: Windows_Update_Inventory
   gather_facts: no
   vars:
     win_update_categories:
