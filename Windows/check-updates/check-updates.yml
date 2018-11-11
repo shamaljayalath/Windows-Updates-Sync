@@ -1,6 +1,6 @@
 ---
-#  ansible_connection: winrm
-#  ansible_winrm_server_cert_validation: ignore
+- hosts: Windows
+  gather_facts: no
   vars:
     win_update_categories:
         - CriticalUpdates
