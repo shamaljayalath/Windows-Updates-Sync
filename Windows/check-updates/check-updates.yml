@@ -1,6 +1,6 @@
 ---
-#- hosts: Windows_group
-#  gather_facts: no
+- hosts: Windows_group
+  gather_facts: no
   vars:
     win_update_categories:
         - CriticalUpdates
