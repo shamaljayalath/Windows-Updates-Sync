@@ -30,7 +30,5 @@
 
         - name: Unzip
           win_dsc:
-            resource_name: Archive
-            Ensure: Present
-            Path: C:\Temp\zipfile.zip
-            Destination: C:\Temp\Temp2
+            resource_name: WindowsFeature
+            Name: telnet-client
