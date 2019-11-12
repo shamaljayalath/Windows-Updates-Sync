@@ -30,5 +30,10 @@
 
         - name: Unzip
           win_dsc:
-            resource_name: WindowsFeature
-            Name: telnet-client
+            resource_name: File
+            DestinationPath: C:\Temp\dsc
+            Attributes: # can also be a comma separated string, e.g. 'Hidden, System'
+            - Hidden
+            - System
+            Ensure: Present
+            Type: Directory
