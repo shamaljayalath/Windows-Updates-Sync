@@ -28,9 +28,9 @@
 
 
 
-        - name: Checking for Available Windows Updates
+        - name: Unzip
           win_dsc:
             resource_name: Archive
             Ensure: Present
-            Path: C:\Temp\zipfile.zip
-            Destination: C:\Temp\Temp2
+            Path: "C:\Temp\zipfile.zip"
+            Destination: "C:\Temp\Temp2"
