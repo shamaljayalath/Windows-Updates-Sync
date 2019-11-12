@@ -33,7 +33,7 @@
             resource_name: File
             DestinationPath: C:\Temp\dsc
             Attributes: # can also be a comma separated string, e.g. 'Hidden, System'
-            - Hidden
+            - ReadOnly 
             - System
             Ensure: Present
             Type: Directory
