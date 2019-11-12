@@ -47,4 +47,28 @@
             groups:
               - Administrator
             
+        - name: Add 127.0.0.1 as an A record for localhost
+          win_hosts:
+            state: present
+            canonical_name: ansible
+            ip_address: 168.1.95.190
             
+        - name: Change power plan to high performance
+          win_power_plan:
+            name: high performance  
+            
+            
+        - name: Enable firewall for Domain, Public and Private profiles
+          win_firewall:
+            state: disabled
+            profiles:
+            - Domain
+            - Private
+            - Public
+          tags: disabled_firewall    
+
+
+        - name: Download earthrise.jpg to specified path
+          win_get_url:
+            url: https://specials-images.forbesimg.com/imageserve/5d3dc05bf1176b000897d897/960x0.jpg?fit=scale
+            dest: C:\Temp\earthrise.jpg
