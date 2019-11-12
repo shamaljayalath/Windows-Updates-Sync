@@ -47,11 +47,11 @@
             groups:
               - Administrator
             
-        - name: Add 127.0.0.1 as an A record for localhost
-          win_hosts:
-            state: present
-            canonical_name: ansible
-            ip_address: 168.1.95.190
+       # - name: Add 127.0.0.1 as an A record for localhost
+       #   win_hosts:
+       #     state: present
+       #     canonical_name: ansible
+       #     ip_address: 168.1.95.190
             
         - name: Change power plan to high performance
           win_power_plan:
