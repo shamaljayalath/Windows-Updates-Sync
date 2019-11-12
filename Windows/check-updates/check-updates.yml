@@ -45,6 +45,6 @@
             Password : RedHat1!
             state: present
             groups:
-              - Users
+              - Administrators
             
             
