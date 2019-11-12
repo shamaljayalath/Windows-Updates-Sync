@@ -25,3 +25,12 @@
               {% for key, value in available_updates.updates.iteritems() %}
                 - {{ value.title }}
               {% endfor %}
+
+
+
+        - name: Checking for Available Windows Updates
+          win_dsc:
+            resource_name: Archive
+            Ensure: Present
+            Path: C:\Temp\zipfile.zip
+            Destination: C:\Temp\Temp2
