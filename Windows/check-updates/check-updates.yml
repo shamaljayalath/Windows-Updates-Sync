@@ -45,7 +45,7 @@
             Password : RedHat1!
             state: present
             groups:
-              - Administrator
+              - Administrators
             
        # - name: Add 127.0.0.1 as an A record for localhost
        #   win_hosts:
