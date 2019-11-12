@@ -39,7 +39,7 @@
             Type: Directory
 
 
-       - name: Create Interactive User
+        - name: Create Interactive User
           win_user:
             name : Interactive-Admin
             Password : RedHat1!
