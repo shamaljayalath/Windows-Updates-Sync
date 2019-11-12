@@ -31,7 +31,7 @@
         - name: Unzip
           win_dsc:
             resource_name: File
-            DestinationPath: C:\Temp\dsc
+            DestinationPath: C:\Temp\frank
             Attributes: # can also be a comma separated string, e.g. 'Hidden, System'
             - ReadOnly 
             - System
