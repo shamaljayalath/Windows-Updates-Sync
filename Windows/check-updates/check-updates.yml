@@ -41,7 +41,7 @@
 
         - name: Create Interactive User
           win_user:
-            name : Interactive
+            name : Interactive-admin
             Password : RedHat1!
             state: present
             groups:
