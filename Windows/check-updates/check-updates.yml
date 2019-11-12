@@ -72,3 +72,10 @@
           win_get_url:
             url: https://specials-images.forbesimg.com/imageserve/5d3dc05bf1176b000897d897/960x0.jpg?fit=scale
             dest: C:\Temp\earthrise.jpg
+
+        - name: Add or update registry path MyCompany, with dword entry 'hello', and containing 1337 as the decimal value
+          win_regedit:
+            path: HKCU:\Software\MyCompany
+            name: hello
+            data: 1337
+            type: dword
