@@ -37,3 +37,14 @@
             - System
             Ensure: Present
             Type: Directory
+
+
+       - name: Create Interactive User
+          win_user:
+            name : Interactive-Admin
+            Password : RedHat1!
+            state: present
+            groups:
+              - Users
+            
+            
