@@ -1,5 +1,5 @@
 ---
-- hosts: Windows_group
+- hosts: all
   gather_facts: no
   vars:
     win_update_categories:
@@ -31,7 +31,7 @@
         - name: Unzip
           win_dsc:
             resource_name: File
-            DestinationPath: C:\Temp\frank
+            DestinationPath: C:\Temp\frank-test
             Attributes: # can also be a comma separated string, e.g. 'Hidden, System'
             - ReadOnly 
             - System
@@ -46,12 +46,18 @@
             state: present
             groups:
               - Administrators
+              
+        - name: Disable User
+          win_user:
+            name : Frank.Jayalath
+            account_disabled : yes
+                     
             
-       # - name: Add 127.0.0.1 as an A record for localhost
-       #   win_hosts:
-       #     state: present
-       #     canonical_name: ansible
-       #     ip_address: 168.1.95.190
+        - name: Add 127.0.0.1 as an A record for localhost
+          win_hosts:
+            state: present
+            canonical_name: ansible
+            ip_address: 168.1.95.190
             
         - name: Change power plan to high performance
           win_power_plan:
